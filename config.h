@@ -7,7 +7,7 @@
  */
 static char *font = "mono:pixelsize=16:antialias=true:autohint=true";
 static char *font2[] = { "Inconsolata for Powerline:pixelsize=16:antialias=true:autohint=true" };
-static int borderpx = 2;
+static int borderpx = 0;
 
 /*
  * What program is execed by st depends of these precedence rules:
@@ -44,7 +44,7 @@ int allowaltscreen = 1;
 
 /* frames per second st should at maximum draw to the screen */
 static unsigned int xfps = 120;
-static unsigned int actionfps = 30;
+static unsigned int actionfps = 60;
 
 /*
  * blinking timeout (set to 0 to disable blinking) for the terminal blinking
@@ -81,34 +81,36 @@ char *termname = "st-256color";
  *
  *	stty tabs
  */
-unsigned int tabspaces = 8;
+unsigned int tabspaces = 4;
 
 /* bg opacity */
-float alpha = 0.92;
+float alpha = 1;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
-	"#282828", /* hard contrast: #1d2021 / soft contrast: #32302f */
-	"#cc241d",
-	"#98971a",
-	"#d79921",
-	"#458588",
-	"#b16286",
-	"#689d6a",
-	"#a89984",
-	"#928374",
-	"#fb4934",
-	"#b8bb26",
-	"#fabd2f",
-	"#83a598",
-	"#d3869b",
-	"#8ec07c",
-	"#ebdbb2",
+	"#121212", /* hard contrast: #1d2021 / soft contrast: #32302f */
+	"#cd0000",
+	"#00cd00",
+	"#cdcd00",
+	"#0000ee",
+	"#cd00cd",
+	"#00cdcd",
+	"#e5e5e5",
+
+	"#7f7f7f",
+	"#ff0000",
+	"#00ff00",
+	"#ffff00",
+	"#5c5cff",
+	"#ff00ff",
+	"#34e2e2",
+	"#ffffff",
+
 	[255] = 0,
 	/* more colors can be added after 255 to use with DefaultXX */
-	"#282828",   /* 256 -> bg */
-	"#ebdbb2",   /* 257 -> fg */
-	"#add8e6", /* 258 -> cursor */
+	"#121212",   /* 256 -> bg */
+	"#d3d7cf",   /* 257 -> fg */
+	"#ffffff", /* 258 -> cursor */
 };
 
 
