@@ -17,7 +17,7 @@ static int borderpx = 0;
  * 4: value of shell in /etc/passwd
  * 5: value of shell in config.h
  */
-static char *shell = "/bin/sh";
+static char *shell = "/bin/bash";
 char *utmp = NULL;
 char *stty_args = "stty raw pass8 nl -echo -iexten -cstopb 38400";
 
@@ -92,7 +92,7 @@ static const char *colorname[] = {
 	"#cd0000",
 	"#00cd00",
 	"#cdcd00",
-	"#0000ee",
+	"#5c5cff",
 	"#cd00cd",
 	"#00cdcd",
 	"#e5e5e5",
@@ -101,7 +101,7 @@ static const char *colorname[] = {
 	"#ff0000",
 	"#00ff00",
 	"#ffff00",
-	"#5c5cff",
+	"#0000ee",
 	"#ff00ff",
 	"#34e2e2",
 	"#ffffff",
@@ -201,7 +201,7 @@ static MouseShortcut mshortcuts[] = {
 };
 
 /* Internal keyboard shortcuts. */
-#define MODKEY Mod1Mask
+#define MODKEY ControlMask
 #define TERMMOD (Mod1Mask|ShiftMask)
 
 MouseKey mkeys[] = {
